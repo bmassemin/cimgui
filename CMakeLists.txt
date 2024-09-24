@@ -32,6 +32,9 @@ if(IMGUI_FREETYPE)
 	add_definitions("-DCIMGUI_FREETYPE=1")
 endif(IMGUI_FREETYPE)
 
+list(APPEND IMGUI_SOURCES imgui/backends/imgui_impl_win32.cpp)
+list(APPEND IMGUI_SOURCES imgui/backends/imgui_impl_dx11.cpp)
+
 #add library and link
 if (IMGUI_STATIC)
     add_library(cimgui STATIC ${IMGUI_SOURCES})
